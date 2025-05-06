@@ -21,3 +21,26 @@ plt.xlabel("Kume Sayisi")
 plt.ylabel("WCSS")
 plt.grid(True)
 plt.show()
+
+kmenas = KMeans(n_clusters=5, init='k-means++', random_state=42)
+clusters = kmenas.fit_predict(x)
+data['Cluster'] = clusters
+
+plt.figure(figsize=(8,6))
+colors = ['red','green','blue','cyan','purple']
+
+for i in range(5):
+    plt.scatter(x[clusters == i]['Annual Income (k$)'],
+                x[clusters == i]['Spending Score (1-100)'],
+                c=colors[i], label=f"küme {i}")
+    
+plt.scatter(kmenas.cluster_centers_[:, 0],
+            kmenas.cluster_centers_[:, 1],
+            s=300, c='yellow', label='Merkezler', marker='X')
+plt.xlabel('Yıllık gelir')
+plt.ylabel("Harcama Skoru")
+plt.title("Musteri Segmentasyonu")
+plt.legend()
+plt.grid(True)
+plt.show()
+    
