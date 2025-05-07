@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # OpenCV ile Yüz Algılama 🎯
 
 Bu proje, **OpenCV** kullanarak gerçek zamanlı bir yüz algılama sistemi sunar.  
@@ -19,6 +20,24 @@ Orijinal olarak [Python for Developers Workshop](https://github.com/ahmetKaya00/
 - OpenCV kütüphanesi
 
 Kurulum:
+=======
+# Sabit Görselle Yüz Algılama 🎯
+
+Bu proje, OpenCV kullanarak sabit bir görsel üzerinden yüz algılama işlemi yapmaktadır.
+
+## Özellikler
+
+- OpenCV'nin Haar cascade sınıflandırıcısını kullanır
+- Sabit bir `.jpg` görseldeki yüzleri algılar ve çerçeve içine alır
+- Sonuç görseli ekran görüntüsü olarak eklenmiştir
+
+## Gereksinimler
+
+- Python 3.x
+- OpenCV
+
+## Kurulum
+>>>>>>> 4b44800 (Demo görseli eklendi ve proje tamamlandı)
 
 ```bash
 pip install opencv-python
